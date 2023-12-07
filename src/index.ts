@@ -5,6 +5,7 @@ import day3 from "./exercises/day_3/main.js";
 import { exec as day4 } from "./exercises/day_4/main.js";
 import { day5 } from "./exercises/day_5/main.js";
 import { day6 } from "./exercises/day_6/main.js";
+import { day7 } from "./exercises/day_7/main.js";
 
 // console.log(chalk.green("Day 1: Trebuchet?!"));
 // console.log(chalk.blue(`1: ${ex1()}`));
@@ -26,5 +27,8 @@ import { day6 } from "./exercises/day_6/main.js";
 // console.log(chalk.green("If You Give A Seed A Fertilizer"));
 // day5();
 
-console.log(chalk.green("Wait For It"));
-day6();
+// console.log(chalk.green("Wait For It"));
+// day6();
+
+console.log(chalk.green("Camel Cards"));
+day7();
