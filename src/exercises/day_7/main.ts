@@ -38,27 +38,22 @@ enum HandValue {
 }
 
 const getData = (input: string[], cardMap: {}): Hand[] => {
-  const data: Hand[] = [];
-  for (const line of input) {
-    const [c, b] = line.split(" ");
-    data.push({
-      cards: c.split("").map(m => {
-        return cardMap[m] || parseInt(m);
-      }),
-      bid: parseInt(b.trim())
-    });
-  }
-  return data;
+  return input.map(line => {
+    const [cards, bid] = line.split(" ");
+    return {
+      cards: cards.split("").map(c => cardMap[c] || parseInt(c)),
+      bid: parseInt(bid.trim())
+    };
+  });
 };
 
 const countCardsAndSort = (h: Hand): Array<[string, number]> => {
-  const counter: { [key: string]: number } = h.cards.reduce((count, value) => {
+  const counter: Record<string, number> = h.cards.reduce((count, value) => {
     count[value] = count[value] ? count[value] + 1 : 1;
     return count;
   }, {});
 
-  const countArr = Object.entries(counter);
-  return countArr.sort((a, b) => b[1] - a[1]);
+  return Object.entries(counter).sort((a, b) => b[1] - a[1]);
 };
 
 const assignHandValue = (includeJokers: boolean = false): ((h: Hand) => Hand) => {
