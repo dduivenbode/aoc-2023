@@ -130,5 +130,7 @@ dist
 .pnp.*
 
 /src/exercises/day_8/
+/src/exercises/day_12/
 
 **/input.txt
+**/input_sample.txt

@@ -8,3 +8,7 @@ export const getInput = (dirname: string, filename: string): string[] => {
 export const getInputPlain = (dirname: string, filename: string): string => {
   return readFileSync(join(dirname, filename), "utf-8");
 };
+
+export const split_at_space = (dirname: string, filename: string): string[] => {
+  return readFileSync(join(dirname, filename), "utf-8").split("\n\n");
+};
