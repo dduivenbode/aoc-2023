@@ -14,6 +14,7 @@ import { day12 } from "./exercises/day_12/main.js";
 import { day13 } from "./exercises/day_13/main.js";
 import { day14 } from "./exercises/day_14/main.js";
 import { day15 } from "./exercises/day_15/main.js";
+import { day16 } from "./exercises/day_16/main.js";
 
 let start: number = 0,
   end: number = 0;
@@ -68,8 +69,11 @@ start = Date.now();
 // console.log(chalk.green("\nDay 14: Parabolic Reflector Dish"));
 // day14();
 
-console.log(chalk.green("\nDay 15: Lens Library"));
-day15();
+// console.log(chalk.green("\nDay 15: Lens Library"));
+// day15();
+
+console.log(chalk.green("\nDay 16: The Floor Will Be Lava"));
+day16();
 
 end = Date.now();
 console.log(chalk.yellow(`\nIt took ${end - start} ms`));
